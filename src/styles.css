@@ -1,0 +1,32 @@
+:root{
+  --bg:#0b1a2a;
+  --panel:#cfd8e3;
+  --accent:#2b7cff;
+  --title:#ffffff;
+  --retro-font: "Press Start 2P", monospace;
+}
+
+/* Basic retro-ish look; swap fonts/palettes for GEOS authenticity */
+body,html,#root{height:100%;margin:0;font-family:var(--retro-font);background:var(--bg);color:var(--title)}
+.desktop{position:relative;height:100vh;overflow:hidden}
+.menubar{display:flex;gap:12px;padding:6px 8px;background:#0d2a44;color:var(--panel);align-items:center}
+.menu{position:relative;padding:4px}
+.menu-dropdown{display:none;position:absolute;top:100%;left:0;background:#dfe8f3;border:2px solid #102020;padding:6px}
+.menu:hover .menu-dropdown{display:block}
+.wallpaper{height:calc(100% - 40px);background:linear-gradient(180deg,#0b2a44,#061426);padding:12px;box-sizing:border-box}
+.icon-grid{display:flex;flex-wrap:wrap;gap:12px}
+.icon{width:90px;text-align:center;color:var(--panel);cursor:default;user-select:none}
+.icon-image{font-size:28px}
+.icon-label{font-size:12px;margin-top:6px}
+.taskbar{position:absolute;bottom:0;left:0;right:0;height:36px;background:#091a30;display:flex;align-items:center;padding:0 8px;gap:6px}
+.task-button{background:#1b3a60;color:var(--panel);border:2px inset #12324a;padding:4px 8px;cursor:pointer;font-size:12px}
+
+/* Window chrome */
+.window{position:absolute;border:4px solid #c0c0c0;background:#e6eef8;box-shadow:4px 4px 0 rgba(0,0,0,0.4);overflow:hidden}
+.titlebar{background:#1b3a60;color:var(--panel);display:flex;justify-content:space-between;align-items:center;padding:4px 8px;cursor:move}
+.title{font-size:12px}
+.controls button{background:#f64;border:0;color:white;padding:2px 6px}
+.window-content{background:white;height:calc(100% - 32px);overflow:auto;padding:6px}
+.file-list{list-style:none;margin:0;padding:0}
+.file-list li{padding:6px;border-bottom:1px solid #eee;display:flex;gap:8px;align-items:center;cursor:pointer}
+.file-list li:hover{background:#f6f9ff}
